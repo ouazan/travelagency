@@ -1,0 +1,53 @@
+/* Styles pour le header */
+header {
+    background-color: #fff; /* Fond blanc */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère pour séparer du contenu */
+    position: sticky; /* Le header reste visible en haut lors du défilement */
+    top: 0;
+    z-index: 1000; /* S'assurer que le header est au-dessus des autres éléments */
+}
+
+.header-container {
+    width: 90%; /* Largeur de 90% du conteneur */
+    max-width: 1200px; /* Largeur maximale de 1200px */
+    margin: 0 auto; /* Centrer horizontalement */
+    display: flex; /* Utilisation de Flexbox */
+    justify-content: space-between; /* Espace entre le logo et la nav */
+    align-items: center; /* Aligner verticalement au centre */
+    padding: 15px 0; /* Espacement intérieur vertical */
+}
+
+.header-logo img {
+    max-width: 100px; /* Largeur maximale du logo */
+    height: auto; /* Hauteur automatique pour garder les proportions */
+}
+
+.header-nav ul {
+    list-style: none; /* Supprimer les puces de la liste */
+    margin: 0; /* Marge extérieure à 0 */
+    padding: 0; /* Marge intérieure à 0 */
+    display: flex; /* Afficher les éléments de la liste en ligne */
+}
+
+.header-nav li {
+    margin-left: 25px; /* Marge à gauche de chaque élément de liste */
+}
+
+.header-nav a {
+    color: #333; /* Couleur du lien en gris foncé */
+    text-decoration: none; /* Pas de soulignement */
+    font-family: 'Montserrat', sans-serif; /* Police Montserrat */
+    font-weight: 600; /* Graisse de la police */
+    font-size: 16px; /* Taille de police */
+    transition: color 0.3s ease; /* Animation douce au changement de couleur */
+}
+
+.header-nav a:hover {
+    color: #0065FC; /* Couleur bleue au survol */
+}
+
+.header-nav a.active {
+    color: #0065FC; /* Couleur bleue pour la page active */
+    border-bottom: 2px solid #0065FC; /* Ligne sous le lien actif */
+    padding-bottom: 5px; /* Espacement pour la ligne */
+}
