@@ -247,6 +247,9 @@ header {
 /* Colonne de gauche */
 .accommodations-left {
     flex: 3;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    padding: 20px;
 }
 
 /* Colonne de droite */
@@ -496,4 +499,79 @@ header {
     color: #fff;
     margin: 0;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+/* ============================================= */
+/* FOOTER                                       */
+/* ============================================= */
+footer {
+    background-color: #333; /* Couleur de fond sombre */
+    color: #fff; /* Texte en blanc */
+    padding: 40px 0; /* Espacement intérieur vertical */
+}
+
+.footer-container {
+    width: 90%; /* Largeur de 90% du conteneur */
+    max-width: 1200px; /* Largeur maximale de 1200px */
+    margin: 0 auto; /* Centrer horizontalement */
+    display: flex; /* Utilisation de Flexbox */
+    justify-content: space-between; /* Espace entre les colonnes */
+    gap: 30px; /* Espace entre les colonnes */
+}
+
+.footer-column {
+    flex: 1; /* Chaque colonne prend une part égale */
+}
+
+.footer-column h3 {
+    font-family: 'Montserrat', sans-serif; /* Police Montserrat */
+    font-weight: 600; /* Graisse de la police */
+    font-size: 18px; /* Taille de police */
+    color: #fff; /* Texte en blanc */
+    margin-bottom: 15px; /* Marge en bas */
+    position: relative; /* Position relative pour le pseudo-élément */
+    padding-bottom: 10px; /* Espacement pour la bordure */
+}
+
+.footer-column h3::after {
+    content: ""; /* Contenu vide */
+    position: absolute; /* Position absolue */
+    bottom: 0; /* Position en bas */
+    left: 0; /* Position à gauche */
+    width: 50px; /* Largeur de la bordure */
+    height: 2px; /* Hauteur de la bordure */
+    background-color: #0065FC; /* Couleur bleue pour la bordure */
+}
+
+.footer-column ul {
+    list-style: none; /* Supprimer les puces de la liste */
+    padding: 0; /* Marge intérieure à 0 */
+    margin: 0; /* Marge extérieure à 0 */
+}
+
+.footer-column li {
+    margin-bottom: 10px; /* Marge en bas de chaque élément */
+}
+
+.footer-column a {
+    color: #ccc; /* Couleur gris clair pour les liens */
+    text-decoration: none; /* Pas de soulignement */
+    font-family: 'Open Sans', sans-serif; /* Police Open Sans */
+    font-size: 16px; /* Taille de police */
+    transition: color 0.3s ease; /* Animation douce au changement de couleur */
+}
+
+.footer-column a:hover {
+    color: #0065FC; /* Couleur bleue au survol */
+}
+
+/* Styles responsives */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Direction verticale */
+        gap: 30px; /* Espace entre les colonnes */
+    }
+    
+    .footer-column {
+        margin-bottom: 20px; /* Marge en bas */
+    }
 }
