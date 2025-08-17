@@ -17,6 +17,7 @@ header {
     padding: 15px 0; /* Espacement intérieur vertical */
 }
 
+
 .header-logo img {
     max-width: 100px; /* Largeur maximale du logo */
     height: auto; /* Hauteur automatique pour garder les proportions */
@@ -50,4 +51,169 @@ header {
     color: #0065FC; /* Couleur bleue pour la page active */
     border-bottom: 2px solid #0065FC; /* Ligne sous le lien actif */
     padding-bottom: 5px; /* Espacement pour la ligne */
+}
+
+/* Styles pour la section Hero */
+/* Styles pour la section Hero */
+.hero {
+    position: relative; /* Position relative pour le pseudo-élément */
+    padding: 60px 0; /* Espacement intérieur vertical augmenté */
+    color: #fff; /* Texte en blanc pour meilleure lisibilité */
+    overflow: hidden; /* Pour éviter tout débordement */
+}
+
+/* Pseudo-élément pour l'image de fond avec opacité */
+.hero::before {
+    content: ""; /* Contenu vide */
+    position: absolute; /* Position absolue */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/hero-bg.jpg'); /* Chemin vers votre image */
+    background-size: cover; /* L'image couvre toute la section */
+    background-position: center; /* Centrer l'image */
+    background-repeat: no-repeat; /* Pas de répétition */
+    opacity: 0.7; /* Opacité à 70% pour ne pas gêner la lecture */
+    z-index: -1; /* Placer l'arrière-plan derrière le contenu */
+}
+
+/* Ajout d'une superposition de couleur pour améliorer la lisibilité */
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 101, 252, 0.3); /* Superposition bleue avec opacité */
+    z-index: -1; /* Placer derrière le contenu */
+}
+
+.hero-container {
+    width: 90%; /* Largeur de 90% du conteneur */
+    max-width: 1200px; /* Largeur maximale de 1200px */
+    margin: 0 auto; /* Centrer horizontalement */
+    text-align: center; /* Centrer le texte */
+    position: relative; /* Position relative pour être au-dessus des pseudo-éléments */
+    z-index: 1; /* S'assurer que le contenu est au-dessus */
+}
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif; /* Police Montserrat */
+    font-weight: 700; /* Graisse de la police */
+    font-size: 36px; /* Taille de police augmentée */
+    color: #fff; /* Texte en blanc */
+    margin-bottom: 15px; /* Marge en bas */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Ombre pour meilleure lisibilité */
+}
+
+.hero h2 {
+    font-family: 'Open Sans', sans-serif; /* Police Open Sans */
+    font-weight: 400; /* Graisse normale */
+    font-size: 22px; /* Taille de police augmentée */
+    color: #fff; /* Texte en blanc */
+    margin-bottom: 30px; /* Marge en bas */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Ombre pour meilleure lisibilité */
+}
+
+/* Styles pour le formulaire de recherche */
+.search-form {
+    display: flex; /* Utilisation de Flexbox */
+    justify-content: center; /* Centrer horizontalement */
+    margin-bottom: 30px; /* Marge en bas */
+}
+
+.search-input-container {
+    position: relative; /* Position relative pour l'icône */
+    width: 60%; /* Largeur du conteneur */
+    max-width: 400px; /* Largeur maximale */
+}
+
+.search-input-container i {
+    position: absolute; /* Position absolue pour l'icône */
+    left: 15px; /* Position à gauche */
+    top: 50%; /* Centrer verticalement */
+    transform: translateY(-50%); /* Ajustement vertical */
+    color: #666; /* Couleur de l'icône */
+}
+
+.search-input-container input {
+    width: 100%; /* Largeur à 100% */
+    padding: 15px 15px 15px 45px; /* Espacement intérieur (gaissé plus grand pour l'icône) */
+    border: none; /* Pas de bordure */
+    border-radius: 5px 0 0 5px; /* Coins arrondis à gauche */
+    font-family: 'Open Sans', sans-serif; /* Police Open Sans */
+    font-size: 16px; /* Taille de police */
+    box-sizing: border-box; /* Inclure le padding dans la largeur */
+    background-color: rgba(255, 255, 255, 0.9); /* Fond blanc avec opacité */
+}
+
+.search-btn {
+    background-color: #0065FC; /* Couleur de fond bleue */
+    color: white; /* Texte en blanc */
+    border: none; /* Pas de bordure */
+    padding: 15px 25px; /* Espacement intérieur */
+    font-family: 'Montserrat', sans-serif; /* Police Montserrat */
+    font-weight: 600; /* Graisse de la police */
+    font-size: 16px; /* Taille de police */
+    border-radius: 0 5px 5px 0; /* Coins arrondis à droite */
+    cursor: pointer; /* Curseur en forme de main */
+    transition: background-color 0.3s ease; /* Animation douce */
+}
+
+.search-btn:hover {
+    background-color: #0052b3; /* Couleur plus foncée au survol */
+}
+
+/* Styles pour les filtres */
+.filters ul {
+    list-style: none; /* Supprimer les puces */
+    padding: 0; /* Marge intérieure à 0 */
+    margin: 0 0 30px 0; /* Marge extérieure */
+    display: flex; /* Afficher en ligne */
+    justify-content: center; /* Centrer horizontalement */
+    flex-wrap: wrap; /* Retour à la ligne si nécessaire */
+}
+
+.filters li {
+    margin: 0 10px 10px 0; /* Marge entre les éléments */
+}
+
+.filter-link {
+    display: flex; /* Afficher en flexbox */
+    align-items: center; /* Aligner verticalement */
+    background-color: rgba(255, 255, 255, 0.9); /* Fond blanc avec opacité */
+    color: #333; /* Texte gris foncé */
+    text-decoration: none; /* Pas de soulignement */
+    padding: 10px 15px; /* Espacement intérieur */
+    border-radius: 20px; /* Coins arrondis */
+    font-family: 'Open Sans', sans-serif; /* Police Open Sans */
+    font-size: 16px; /* Taille de police */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Bordure semi-transparente */
+    transition: all 0.3s ease; /* Animation douce */
+}
+
+.filter-link i {
+    margin-right: 8px; /* Marge à droite de l'icône */
+    color: #0065FC; /* Couleur bleue pour les icônes */
+}
+
+.filter-link:hover {
+    background-color: #0065FC; /* Fond bleu au survol */
+    color: white; /* Texte blanc */
+    border-color: #0065FC; /* Bordure bleue */
+}
+
+.filter-link:hover i {
+    color: white; /* Icône blanche au survol */
+}
+
+/* Styles pour le texte informatif */
+.info-text {
+    font-family: 'Open Sans', sans-serif; /* Police Open Sans */
+    font-size: 16px; /* Taille de police */
+    color: #fff; /* Texte en blanc */
+    margin: 0; /* Pas de marge */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Ombre pour meilleure lisibilité */
 }
