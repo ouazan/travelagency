@@ -1,64 +1,82 @@
-/* Styles pour le header */
+/* ==================================================== */
+/* STYLES GLOBAUX                                       */
+/* ==================================================== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ==================================================== */
+/* HEADER                                               */
+/* ==================================================== */
 header {
-    background-color: #fff; /* Fond blanc */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère pour séparer du contenu */
-    position: sticky; /* Le header reste visible en haut lors du défilement */
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
     top: 0;
-    z-index: 1000; /* S'assurer que le header est au-dessus des autres éléments */
+    z-index: 1000;
 }
 
 .header-container {
-    width: 90%; /* Largeur de 90% du conteneur */
-    max-width: 1200px; /* Largeur maximale de 1200px */
-    margin: 0 auto; /* Centrer horizontalement */
-    display: flex; /* Utilisation de Flexbox */
-    justify-content: space-between; /* Espace entre le logo et la nav */
-    align-items: center; /* Aligner verticalement au centre */
-    padding: 15px 0; /* Espacement intérieur vertical */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
 }
 
-
 .header-logo img {
-    max-width: 100px; /* Largeur maximale du logo */
-    height: auto; /* Hauteur automatique pour garder les proportions */
+    max-width: 100px;
+    height: auto;
 }
 
 .header-nav ul {
-    list-style: none; /* Supprimer les puces de la liste */
-    margin: 0; /* Marge extérieure à 0 */
-    padding: 0; /* Marge intérieure à 0 */
-    display: flex; /* Afficher les éléments de la liste en ligne */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
 .header-nav li {
-    margin-left: 25px; /* Marge à gauche de chaque élément de liste */
+    margin-left: 25px;
 }
 
 .header-nav a {
-    color: #333; /* Couleur du lien en gris foncé */
-    text-decoration: none; /* Pas de soulignement */
-    font-family: 'Montserrat', sans-serif; /* Police Montserrat */
-    font-weight: 600; /* Graisse de la police */
-    font-size: 16px; /* Taille de police */
-    transition: color 0.3s ease; /* Animation douce au changement de couleur */
+    color: #333;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
 
 .header-nav a:hover {
-    color: #0065FC; /* Couleur bleue au survol */
+    color: #0065FC;
 }
 
 .header-nav a.active {
-    color: #0065FC; /* Couleur bleue pour la page active */
-    border-bottom: 2px solid #0065FC; /* Ligne sous le lien actif */
-    padding-bottom: 5px; /* Espacement pour la ligne */
+    color: #0065FC;
+    border-bottom: 2px solid #0065FC;
+    padding-bottom: 5px;
 }
 
-/* ============================================= */
-/* SECTION HERO                                  */
-/* ============================================= */
+/* ==================================================== */
+/* SECTION HERO                                         */
+/* ==================================================== */
 .hero {
     position: relative;
-    padding: 60px 0;
+    padding: 40px 0;
     color: #fff;
     overflow: hidden;
 }
@@ -101,7 +119,7 @@ header {
 .hero h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 28px;
     color: #fff;
     margin-bottom: 15px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -110,25 +128,25 @@ header {
 .hero h2 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 18px;
     color: #fff;
     margin-bottom: 30px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* ============================================= */
-/* FORMULAIRE DE RECHERCHE HERO                  */
-/* ============================================= */
+/* Formulaire de recherche */
 .hero .search-form {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 30px;
 }
 
 .hero .search-input-container {
     position: relative;
-    width: 60%;
+    width: 100%;
     max-width: 400px;
+    margin-bottom: 10px;
 }
 
 .hero .search-input-container i {
@@ -143,7 +161,7 @@ header {
     width: 100%;
     padding: 15px 15px 15px 45px;
     border: none;
-    border-radius: 5px 0 0 5px;
+    border-radius: 5px;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     box-sizing: border-box;
@@ -158,18 +176,18 @@ header {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 16px;
-    border-radius: 0 5px 5px 0;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 400px;
 }
 
 .hero .search-btn:hover {
     background-color: #0052b3;
 }
 
-/* ============================================= */
-/* FILTRES HERO                                 */
-/* ============================================= */
+/* Filtres */
 .hero .filters ul {
     list-style: none;
     padding: 0;
@@ -220,11 +238,11 @@ header {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* ============================================= */
-/* SECTION HEBERGEMENTS                         */
-/* ============================================= */
+/* ==================================================== */
+/* SECTION HEBERGEMENTS                                 */
+/* ==================================================== */
 .accommodations {
-    padding: 40px 0;
+    padding: 30px 0;
     background-color: #fff;
 }
 
@@ -233,46 +251,43 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     gap: 30px;
 }
 
 .accommodations h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 22px;
     color: #333;
     margin-bottom: 20px;
 }
 
-/* Colonne de gauche */
-.accommodations-left {
-    flex: 3;
-    background-color: #f2f2f2;
-    border-radius: 15px;
-    padding: 20px;
-}
-
-/* Colonne de droite */
+/* Colonnes */
+.accommodations-left,
 .accommodations-right {
-    flex: 1;
     background-color: #f2f2f2;
     border-radius: 15px;
     padding: 20px;
 }
 
-/* ============================================= */
-/* GRILLE HEBERGEMENTS                          */
-/* ============================================= */
+.accommodations-left {
+    order: 2;
+}
+
+.accommodations-right {
+    order: 1;
+}
+
+/* Grille des hébergements */
 .accommodations-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 20px;
     margin-bottom: 20px;
 }
 
-/* ============================================= */
-/* CARTES HEBERGEMENTS                           */
-/* ============================================= */
+/* Cartes d'hébergement */
 .accommodation-card {
     background-color: #fff;
     border-radius: 15px;
@@ -303,9 +318,7 @@ header {
     margin: 0 0 10px 0;
 }
 
-/* ============================================= */
-/* NOTATION AVEC ETOILES                         */
-/* ============================================= */
+/* Notation avec étoiles */
 .accommodation-card .rating {
     margin-bottom: 10px;
 }
@@ -315,9 +328,7 @@ header {
     font-size: 14px;
 }
 
-/* ============================================= */
-/* PRIX                                         */
-/* ============================================= */
+/* Prix */
 .accommodation-card .price {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
@@ -330,9 +341,7 @@ header {
     color: #0065FC;
 }
 
-/* ============================================= */
-/* BOUTON AFFICHER PLUS                         */
-/* ============================================= */
+/* Bouton "Afficher plus" */
 .show-more {
     text-align: center;
 }
@@ -356,9 +365,7 @@ header {
     color: #fff;
 }
 
-/* ============================================= */
-/* CARTES POPULAIRES                             */
-/* ============================================= */
+/* Cartes populaires */
 .popular-accommodations {
     display: flex;
     flex-direction: column;
@@ -421,11 +428,11 @@ header {
     color: #0065FC;
 }
 
-/* ============================================= */
-/* SECTION ACTIVITES                             */
-/* ============================================= */
+/* ==================================================== */
+/* SECTION ACTIVITES                                    */
+/* ==================================================== */
 .activities {
-    padding: 40px 0;
+    padding: 30px 0;
     background-color: #fff;
 }
 
@@ -438,24 +445,19 @@ header {
 .activities h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 22px;
     color: #333;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
-/* ============================================= */
-/* GRILLE ACTIVITES                             */
-/* ============================================= */
+/* Grille des activités */
 .activities-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
     gap: 20px;
 }
 
-/* ============================================= */
-/* CARTES ACTIVITES                              */
-/* ============================================= */
+/* Cartes d'activités */
 .activity-card {
     background-color: #fff;
     border-radius: 15px;
@@ -471,8 +473,6 @@ header {
 }
 
 .activity-card.large {
-    grid-column: span 2;
-    grid-row: span 2;
     height: auto;
 }
 
@@ -500,78 +500,200 @@ header {
     margin: 0;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
-/* ============================================= */
-/* FOOTER                                       */
-/* ============================================= */
+
+/* ==================================================== */
+/* FOOTER                                               */
+/* ==================================================== */
 footer {
-    background-color: #333; /* Couleur de fond sombre */
-    color: #fff; /* Texte en blanc */
-    padding: 40px 0; /* Espacement intérieur vertical */
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
 }
 
 .footer-container {
-    width: 90%; /* Largeur de 90% du conteneur */
-    max-width: 1200px; /* Largeur maximale de 1200px */
-    margin: 0 auto; /* Centrer horizontalement */
-    display: flex; /* Utilisation de Flexbox */
-    justify-content: space-between; /* Espace entre les colonnes */
-    gap: 30px; /* Espace entre les colonnes */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .footer-column {
-    flex: 1; /* Chaque colonne prend une part égale */
+    margin-bottom: 20px;
 }
 
 .footer-column h3 {
-    font-family: 'Montserrat', sans-serif; /* Police Montserrat */
-    font-weight: 600; /* Graisse de la police */
-    font-size: 18px; /* Taille de police */
-    color: #fff; /* Texte en blanc */
-    margin-bottom: 15px; /* Marge en bas */
-    position: relative; /* Position relative pour le pseudo-élément */
-    padding-bottom: 10px; /* Espacement pour la bordure */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 10px;
 }
 
 .footer-column h3::after {
-    content: ""; /* Contenu vide */
-    position: absolute; /* Position absolue */
-    bottom: 0; /* Position en bas */
-    left: 0; /* Position à gauche */
-    width: 50px; /* Largeur de la bordure */
-    height: 2px; /* Hauteur de la bordure */
-    background-color: #0065FC; /* Couleur bleue pour la bordure */
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #0065FC;
 }
 
 .footer-column ul {
-    list-style: none; /* Supprimer les puces de la liste */
-    padding: 0; /* Marge intérieure à 0 */
-    margin: 0; /* Marge extérieure à 0 */
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .footer-column li {
-    margin-bottom: 10px; /* Marge en bas de chaque élément */
+    margin-bottom: 10px;
 }
 
 .footer-column a {
-    color: #ccc; /* Couleur gris clair pour les liens */
-    text-decoration: none; /* Pas de soulignement */
-    font-family: 'Open Sans', sans-serif; /* Police Open Sans */
-    font-size: 16px; /* Taille de police */
-    transition: color 0.3s ease; /* Animation douce au changement de couleur */
+    color: #ccc;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
 
 .footer-column a:hover {
-    color: #0065FC; /* Couleur bleue au survol */
+    color: #0065FC;
 }
 
-/* Styles responsives */
-@media screen and (max-width: 768px) {
+/* ==================================================== */
+/* MEDIA QUERIES - TABLETTES                            */
+/* ==================================================== */
+@media screen and (min-width: 768px) {
+    /* Header */
+    .header-nav li {
+        margin-left: 25px;
+    }
+    
+    /* Hero */
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .hero h1 {
+        font-size: 32px;
+    }
+    
+    .hero h2 {
+        font-size: 20px;
+    }
+    
+    .hero .search-form {
+        flex-direction: row;
+    }
+    
+    .hero .search-input-container {
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+    
+    .hero .search-btn {
+        width: auto;
+        max-width: none;
+        border-radius: 0 5px 5px 0;
+    }
+    
+    /* Hébergements */
+    .accommodations {
+        padding: 40px 0;
+    }
+    
+    .accommodations h2 {
+        font-size: 24px;
+    }
+    
+    .accommodations-container {
+        flex-direction: row;
+    }
+    
+    .accommodations-left {
+        order: 1;
+        flex: 3;
+    }
+    
+    .accommodations-right {
+        order: 2;
+        flex: 1;
+    }
+    
+    .accommodations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Activités */
+    .activities {
+        padding: 40px 0;
+    }
+    
+    .activities h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    
+    .activities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .activity-card.large {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 40px 0;
+    }
+    
     .footer-container {
-        flex-direction: column; /* Direction verticale */
-        gap: 30px; /* Espace entre les colonnes */
+        flex-direction: row;
+        justify-content: space-between;
     }
     
     .footer-column {
-        margin-bottom: 20px; /* Marge en bas */
+        margin-bottom: 0;
+    }
+}
+
+/* ==================================================== */
+/* MEDIA QUERIES - DESKTOP                              */
+/* ==================================================== */
+@media screen and (min-width: 1024px) {
+    /* Hero */
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .hero h2 {
+        font-size: 22px;
+    }
+    
+    /* Hébergements */
+    .accommodations-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Activités */
+    .activities-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto auto;
+    }
+    
+    .activity-card {
+        height: 200px;
+    }
+    
+    .activity-card.large {
+        grid-column: span 2;
+        grid-row: span 2;
+        height: auto;
     }
 }
